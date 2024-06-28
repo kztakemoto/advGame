@@ -48,9 +48,6 @@ def run_iteration(n):
     elif args.network  == 'ER':
         # Erdos-Renyi model
         g = nx.gnm_random_graph(args.N, int(args.kave * args.N / 2), directed=False, seed=args.seed + n)
-    elif args.network == 'RR':
-        # Random regular graph
-        g = nx.random_regular_graph(int(args.kave), args.N, seed=args.seed + n)
     elif args.network == 'WS':
         # Watts-Strogatz model
         pws = 0.05
