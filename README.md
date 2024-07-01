@@ -1,12 +1,12 @@
 # advGame
 
-This repository contains data and code used
+This repository contains data and code used in [*Steering cooperation: Adversarial attacks on prisoner's dilemma in complex networks*](https://arxiv.org/abs/2406.19692)
 
 ## Terms of use
 
 MIT licensed. Happy if you cite our papers when utilizing the codes:
 
-Takemoto K (2024)
+Takemoto K (2024) **Steering cooperation: Adversarial attacks on prisoner's dilemma in complex networks.** arXiv:2406.19692.
 
 ## Requirements
 * Python 3.11
@@ -42,7 +42,7 @@ To specify the network, use the following arguments:
 * ``--network soc-anybeat``: AnyBeat network
 * ``--network soc-hamsterster``: HAMSTERster network
 
-### Run with different b and $\epsilon$
+### Run with different $b$ and $\epsilon$
 ```
 bash run.sh
 ```
