@@ -4,56 +4,58 @@ This repository contains data and code used in [*Steering cooperation: Adversari
 
 ## Terms of use
 
-MIT licensed. Happy if you cite our papers when utilizing the codes:
+This project is MIT licensed. We appreciate citations of our paper when using this code:
 
 Takemoto K (2024) **Steering cooperation: Adversarial attacks on prisoner's dilemma in complex networks.** arXiv:2406.19692.
 
 ## Requirements
 * Python 3.11
+
+Install dependencies:
 ```
 pip install -r requirements.txt
 ```
 
 ## Usage
 ### Run Prisoner's Dilemma Game in Model Networks
-in Erdos-Renyi networks
+For Erdős-Rényi networks:
 ```
 python run_game.py --network ER
 ```
-Note that $N=t_{\max}=1000$, $\langle k \rangle = 8$, $b=1.4$, and $\epsilon=0.2$ are in default configuration (see `run_game.py` for details).
+Default configuration: $N=t_{\max}=1000$, $\langle k \rangle = 8$, $b=1.4$, and $\epsilon=0.2$ (see ``run_game.py`` for details).
 
-To specify the network model, use the following arguments:
-* ``--network BA``: Barabasi-Albert model
+To specify other network models, use the following arguments:
+* ``--network BA``: Barabási-Albert model
 * ``--network WS``: Watts-Strogatz model
 
-To specify the link weight adjustment method, add the following arguments:
+To specify the link weight adjustment method, add one of these arguments:
 * ``--random``: random attacks
 * ``--adaptive``: Li et al.'s method
 
 
 ### Run Prisoner's Dilemma Game in Real-World Networks
-in Facebook network
+For Facebook network:
 ```
 python run_game.py --network facebook_combined
 ```
 
-To specify the network, use the following arguments:
+Other available networks:
 * ``--network soc-advogato``: Advogato network
 * ``--network soc-anybeat``: AnyBeat network
 * ``--network soc-hamsterster``: HAMSTERster network
 
-### Run with different $b$ and $\epsilon$
+### Run with different $b$ and $\epsilon$ Values
 ```
 bash run.sh
 ```
 
 ### Plot the Results
-Line plots of $\rho$ versus $b$ for different $\epsilon$ (Figs. 1 and 4)
+Line plots of $\rho$ versus $b$ for different $\epsilon$ (Figs. 1 and 4):
 ```
 python plot_coopratio_vs_payoffb_wrt_eps.py --network ER
 ```
 
-Line plots of $\rho$ versus $\epsilon$ (e.g., Figs. 2 and 3)
+Line plots of $\rho$ versus $\epsilon$ (Figs. 2 and 3):
 ```
 python plot_coopratio_vs_eps.py --network ER
 ```
