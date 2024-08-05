@@ -103,13 +103,6 @@ def run_iteration(n):
                         neighbors_payoffs = np.array([g.nodes[j]['total_payoff'] for j in neighbors])
                         weights = weights + 0.01 * np.sign(g.nodes[i]['total_payoff'] - np.mean(neighbors_payoffs))
                         weights = np.clip(weights, 1.0-abs(args.eps), 1.0+abs(args.eps))
-
-                    elif args.simple:
-                        # simple computation of adversarial perturbations
-                        sign_gradients = np.ones(degree_i)
-                        neighbor_states = np.array([state_dict[g.nodes[j]['action']] for j in neighbors])
-                        sign_gradients[np.where(neighbor_states == -1)] = -1
-                        weights = 1.0 + args.eps * sign_gradients
                     
                     else:
                         # compute adversarial perturbations
