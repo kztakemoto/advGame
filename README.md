@@ -1,12 +1,12 @@
 # advGame
 
-This repository contains data and code used in [*Steering cooperation: Adversarial attacks on prisoner's dilemma in complex networks*](https://arxiv.org/abs/2406.19692)
+This repository contains data and code used in [*Steering cooperation: Adversarial attacks on prisoner's dilemma in complex networks*](https://doi.org/10.1016/j.physa.2024.130214)
 
 ## Terms of use
 
 This project is MIT licensed. We appreciate citations of our paper when using this code:
 
-Takemoto K (2024) **Steering cooperation: Adversarial attacks on prisoner's dilemma in complex networks.** arXiv:2406.19692.
+Takemoto K (2024) **Steering cooperation: Adversarial attacks on prisoner's dilemma in complex networks.** Physica A 655, 130214.
 
 ## Requirements
 * Python 3.11
